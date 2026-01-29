@@ -3,31 +3,26 @@ const app = express();
 const PORT = process.env.PORT || 3500;
 const fs = require("fs");
 const path = require("path");
+const logger = require("./logger");
+
+/* lets deel with middlewares */
+//app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
+app.use(logger);
+
+/* handles routes */
 
 app.get(/^\/$|^\/index(\.html)?$/, (req, res) => {
   //this is will work in get request
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
-/* app.get(/^\/$|^\/index(\.html)?$/, (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-}); */
-/* app.get("/index.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-}); */
-
-//trying redirecting
+//trying redirecting and here url only redirect not content if you want to parse the related file of the new page you need to get seperately for that url
 app.get("/old-page", (req, res) => {
   res.redirect(301, "new-page.html");
 });
 app.get(/^\/new-page(.html)?$/, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "new-page.html"));
 });
-app.get(
-  "/regular expression from the picch and they need to find the ",
-  (req, res) => {
-    res.sendFile();
-  },
-);
 
 //chaining array
 app.get(
