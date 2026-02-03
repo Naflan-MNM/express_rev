@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3500;
 const fs = require("fs");
 const path = require("path");
-const logger = require("./logger");
+const { logger } = require("./logger");
 
 /* lets deel with middlewares */
 //app.use(express.static(path.join(__dirname, "public")));
