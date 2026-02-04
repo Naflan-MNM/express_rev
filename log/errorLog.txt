@@ -1,0 +1,50 @@
+2026/02/04	10:50:39	 Req_Method:GET,	 Req_Url:/test,
+ Error name: Error 
+ Error message: something broked! 
+ Error stack: Error: something broked!
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\webserver.js:28:9
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:291:5)
+    at logger (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\logger.js:19:3) 
+ ______________________________________________________________________________________
+
+2026/02/04	10:53:54	 
+ Req_Method:GET,	 Req_Url:/test,
+ Error name: Error 
+ Error message: something broked! 
+ Error stack: Error: something broked!
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\webserver.js:28:9
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:291:5)
+    at logger (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\logger.js:19:3) 
+ ______________________________________________________________________________________
+
+2026/02/04	10:54:20	 
+ Req_Method:GET	 Req_Url:/test
+ Error name: Error 
+ Error message: something broked! 
+ Error stack: Error: something broked!
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\webserver.js:28:9
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:295:15
+    at processParams (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:582:12)
+    at next (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\node_modules\router\index.js:291:5)
+    at logger (C:\Users\Lenovo\Desktop\express_rev\nodejs_web_server\logger.js:19:3) 
+ ______________________________________________________________________________________
+

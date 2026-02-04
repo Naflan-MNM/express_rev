@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3500;
 const fs = require("fs");
 const path = require("path");
-const { logger } = require("./logger");
+const { logger, errHandler } = require("./logger");
 
 /* lets deel with middlewares */
 //app.use(express.static(path.join(__dirname, "public")));
@@ -20,8 +20,13 @@ app.get(/^\/$|^\/index(\.html)?$/, (req, res) => {
 app.get("/old-page", (req, res) => {
   res.redirect(301, "new-page.html");
 });
-app.get(/^\/new-page(.html)?$/, (req, res) => {
+/* app.get(/^\/new-page(.html)?$/, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "new-page.html"));
+}); */
+
+app.get("/test", (req, res) => {
+  throw new Error("something broked!");
+  next();
 });
 
 //chaining array
@@ -40,6 +45,9 @@ app.get(
 app.get("/*path", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
+
+//import errorhandler middleware
+app.use(errHandler);
 
 app.listen(PORT, () => {
   console.log(`the server running on th ${PORT} number!`);

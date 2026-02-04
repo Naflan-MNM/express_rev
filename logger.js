@@ -13,17 +13,24 @@ const logger = (req, res, next) => {
     const responsTime = Date.now() - start;
     const message = `${method} \t ${requestedUrl} \t ${statusCode} \t ${statusMessage} \t ${responsTime}ms`;
 
-    logEvent(message);
+    logEvent(message, "logreport.txt");
   });
 
   next();
 };
 
-const logEvent = async (message) => {
+const errHandler = (err, req, res, next) => {
+  const message = ` \n Req_Method:${req.method}\t Req_Url:${req.url}\n Error name: ${err.name} \n Error message: ${err.message} \n Error stack: ${err.stack} \n ______________________________________________________________________________________\n`;
+  console.log(message);
+  res.status(500).send(err.message);
+  logEvent(message, "errorLog.txt");
+};
+
+const logEvent = async (message, filename) => {
   try {
     const timeStamp = format(new Date(), "yyyy/MM/dd\tHH:mm:ss");
     const logDir = path.join(__dirname, "log");
-    const logFile = path.join(logDir, "logreport.txt");
+    const logFile = path.join(logDir, filename);
 
     // Ensure directory exists
     await fs.promises.mkdir(logDir, { recursive: true });
@@ -37,4 +44,4 @@ const logEvent = async (message) => {
 
 module.exports = logEvent;
 
-module.exports = { logger, logEvent };
+module.exports = { logger, logEvent, errHandler };
