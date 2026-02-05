@@ -24,3 +24,18 @@
 2026/02/04	10:54:20	GET 	 /test 	 500 	 Internal Server Error 	 7ms
 2026/02/04	10:55:20	GET 	 /old-page 	 301 	 Moved Permanently 	 11ms
 2026/02/04	10:55:20	GET 	 /new-page.html 	 404 	 Not Found 	 10ms
+2026/02/04	11:58:25	GET 	 /new-page.html 	 404 	 Not Found 	 7ms
+2026/02/04	12:16:27	GET 	 /new-page.html 	 404 	 Not Found 	 22ms
+2026/02/04	12:16:38	GET 	 /new-page.html 	 200 	 OK 	 7ms
+2026/02/04	12:17:00	GET 	 /new-page.html 	 304 	 Not Modified 	 3ms
+2026/02/04	12:17:24	GET 	 / 	 200 	 OK 	 9ms
+2026/02/04	12:17:47	GET 	 / 	 200 	 OK 	 16ms
+2026/02/04	12:19:11	GET 	 / 	 200 	 OK 	 19ms
+2026/02/04	12:19:34	GET 	 / 	 200 	 OK 	 11ms
+2026/02/04	12:24:55	GET 	 / 	 200 	 OK 	 8ms
+2026/02/04	12:26:05	GET 	 / 	 200 	 OK 	 2ms
+2026/02/04	12:30:35	GET 	 / 	 200 	 OK 	 3ms
+2026/02/04	12:30:49	GET 	 / 	 304 	 Not Modified 	 2ms
+2026/02/04	12:31:43	GET 	 /new-page.html 	 304 	 Not Modified 	 4ms
+2026/02/04	12:32:23	GET 	 /.well-known/appspecific/com.chrome.devtools.json 	 404 	 Not Found 	 3ms
+2026/02/04	12:32:28	GET 	 / 	 304 	 Not Modified 	 3ms

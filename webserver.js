@@ -4,11 +4,16 @@ const PORT = process.env.PORT || 3500;
 const fs = require("fs");
 const path = require("path");
 const { logger, errHandler } = require("./logger");
+const cors = require("cors");
 
 /* lets deel with middlewares */
-//app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("public"));
 app.use(logger);
+app.use(
+  cors({
+    origin: "https://www.google.com",
+  }),
+);
 
 /* handles routes */
 
@@ -20,13 +25,12 @@ app.get(/^\/$|^\/index(\.html)?$/, (req, res) => {
 app.get("/old-page", (req, res) => {
   res.redirect(301, "new-page.html");
 });
-/* app.get(/^\/new-page(.html)?$/, (req, res) => {
+app.get(/^\/new-page(.html)?$/, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "new-page.html"));
-}); */
+});
 
 app.get("/test", (req, res) => {
   throw new Error("something broked!");
-  next();
 });
 
 //chaining array
